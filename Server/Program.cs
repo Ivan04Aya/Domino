@@ -49,9 +49,8 @@ namespace Server
             WindowsIdentity currentIdentity = WindowsIdentity.GetCurrent();
             if (currentIdentity != null)
             {
-                WindowsPrincipal pricipal = new WindowsPrincipal(currentIdentity);
-                isAdmin = pricipal.IsInRole(WindowsBuiltInRole.Administrator);
-                pricipal = null;
+                WindowsPrincipal principal = new WindowsPrincipal(currentIdentity);
+                isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
             }
             return isAdmin;
         }

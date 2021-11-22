@@ -11,7 +11,7 @@ namespace WcfDomino
         private DateTime date;
 
         [DataMember]
-        public Player user
+        public Player User
         {
             get { return player; }
             set { player = value; }

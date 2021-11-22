@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfDomino.ConsultHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDomino"
+        xmlns:p ="clr-namespace:WpfDomino.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static p:Resources.titleCosultHistory}" Height="450" Width="800">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="240" Margin="150,100,0,0" VerticalAlignment="Top" Width="500"/>
+        <Label x:Name="lbGameWins" Content="{x:Static p:Resources.lbGamesWins}" HorizontalAlignment="Left" Margin="121,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbGamesLoses" Content="{x:Static p:Resources.lbGamesLose}" HorizontalAlignment="Left" Margin="314,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbGamesTotal" Content="{x:Static p:Resources.lbGamesTotal}" HorizontalAlignment="Left" Margin="480,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbNumWin" Content="0" HorizontalAlignment="Left" Margin="204,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbNumTotal" Content="0" HorizontalAlignment="Left" Margin="565,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbNumLose" Content="0" HorizontalAlignment="Left" Margin="401,46,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btLeave" Content="{x:Static p:Resources.btLeave}" HorizontalAlignment="Left" Margin="679,371,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

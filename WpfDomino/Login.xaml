@@ -4,15 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDomino"
+        xmlns:p="clr-namespace:WpfDomino.Properties"
         mc:Ignorable="d"
-        Title="Login" Height="313.918" Width="543.734">
+        Title="{x:Static p:Resources.titleLogin}" Height="313.918" Width="543.734">
     <Grid Margin="0,0,2,-2">
         <TextBox x:Name="tbUser" HorizontalAlignment="Left" Height="23" Margin="196,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
-        <Label x:Name="lbUser" Content="User :" HorizontalAlignment="Left" Margin="66,44,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label x:Name="lbUser" Content="{x:Static p:Resources.lbUser}" HorizontalAlignment="Left" Margin="66,44,0,0" VerticalAlignment="Top" Width="71"/>
         <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="196,123,0,0" VerticalAlignment="Top" Height="23" Width="249"/>
-        <Label x:Name="lbPassword" Content="Password :" HorizontalAlignment="Left" Margin="66,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.636,0.254"/>
-        <Button x:Name="btLogin" Content="Login" HorizontalAlignment="Left" Margin="370,228,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="btLogin_Click"/>
-        <Button x:Name="btCancel" Content="Cancel" HorizontalAlignment="Left" Margin="66,228,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btCancel_Click"/>
+        <Label x:Name="lbPassword" Content="{x:Static p:Resources.lbPassword}" HorizontalAlignment="Left" Margin="66,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.636,0.254"/>
+        <Button x:Name="btLogin" Content="{x:Static p:Resources.btLogin}" HorizontalAlignment="Left" Margin="66,228,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="btLogin_Click"/>
+        <Button x:Name="btCancel" Content="{x:Static p:Resources.btCancel}" HorizontalAlignment="Left" Margin="370,228,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btCancel_Click"/>
+        <Label x:Name="lbMesssageRecord" Content="{x:Static p:Resources.lbMessageRecord}" HorizontalAlignment="Left" Margin="126,165,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btRecordPlayer" Content="{x:Static p:Resources.btClickHere}" HorizontalAlignment="Left" Margin="302,168,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Click="btRecordPlayer_Click" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"/>
 
     </Grid>
 </Window>

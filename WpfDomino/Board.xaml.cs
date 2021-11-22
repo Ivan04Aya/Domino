@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfDomino
 {
     /// <summary>
-    /// Lógica de interacción para StartGame.xaml
+    /// Lógica de interacción para Board.xaml
     /// </summary>
-    public partial class StartGame : Window
+    public partial class Board : Window
     {
-        public StartGame()
+        public Board()
         {
             InitializeComponent();
-        }
-
-        public StartGame(string user)
-        {
-            InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

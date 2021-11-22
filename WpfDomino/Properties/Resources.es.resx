@@ -118,108 +118,108 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btAbandonGame" xml:space="preserve">
-    <value>Abandon Game</value>
+    <value>Abandonar Partida</value>
   </data>
   <data name="btCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="btClickHere" xml:space="preserve">
-    <value>Click Here</value>
+    <value>Click Aqui</value>
   </data>
   <data name="btConfirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Confirmar</value>
   </data>
   <data name="btDisplayHistory" xml:space="preserve">
-    <value>Display History</value>
+    <value>Desplegar Historial</value>
   </data>
   <data name="btJoinGame" xml:space="preserve">
-    <value>Join Game</value>
+    <value>Unirse a Partida</value>
   </data>
   <data name="btLeave" xml:space="preserve">
-    <value>Leave</value>
+    <value>Salir</value>
   </data>
   <data name="btLeaveGame" xml:space="preserve">
-    <value>Leave Game</value>
+    <value>Salir del Juego</value>
   </data>
   <data name="btLogin" xml:space="preserve">
-    <value>Login</value>
+    <value>Inicio de sesión</value>
   </data>
   <data name="btPassTurn" xml:space="preserve">
-    <value>Pass Turn</value>
+    <value>Pasar Turno</value>
   </data>
   <data name="btPlaceToken" xml:space="preserve">
-    <value>Place Token</value>
+    <value>Colocar Ficha</value>
   </data>
   <data name="btSavePlayer" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="btSendEmail" xml:space="preserve">
-    <value>Send Email</value>
+    <value>Enviar Correo</value>
   </data>
   <data name="btSingOff" xml:space="preserve">
-    <value>Sing Off</value>
+    <value>Cerrar Sesion</value>
   </data>
   <data name="btStarGame" xml:space="preserve">
-    <value>Star Game</value>
+    <value>Iniciar Partida</value>
   </data>
   <data name="lbBoardColor" xml:space="preserve">
-    <value>Board Color: </value>
+    <value>Color del Tablero: </value>
   </data>
   <data name="lbCode" xml:space="preserve">
-    <value>Code:</value>
+    <value>Codigo:</value>
   </data>
   <data name="lbCreateGame" xml:space="preserve">
-    <value>Create Game</value>
+    <value>Crear Partida</value>
   </data>
   <data name="lbEmail" xml:space="preserve">
-    <value>Email:</value>
+    <value>Correo:</value>
   </data>
   <data name="lbGamesLose" xml:space="preserve">
-    <value>Games Loses: </value>
+    <value>Partidas Perdidas: </value>
   </data>
   <data name="lbGamesTotal" xml:space="preserve">
-    <value>Games Total: </value>
+    <value>Partidas Totales: </value>
   </data>
   <data name="lbGamesWins" xml:space="preserve">
-    <value>Games Wins: </value>
+    <value>Partidas Ganadas: </value>
   </data>
   <data name="lbMessageRecord" xml:space="preserve">
-    <value>If you are not registered yet</value>
+    <value>Si aún no está registrado</value>
   </data>
   <data name="lbName" xml:space="preserve">
-    <value>Name:</value>
+    <value>Nombre:</value>
   </data>
   <data name="lbPassword" xml:space="preserve">
-    <value>Password:</value>
+    <value>Contraseña:</value>
   </data>
   <data name="lbPreview" xml:space="preserve">
-    <value>Preview: </value>
+    <value>Vista Previa: </value>
   </data>
   <data name="lbRegistration" xml:space="preserve">
-    <value>Registration</value>
+    <value>Registro</value>
   </data>
   <data name="lbUser" xml:space="preserve">
-    <value>User: </value>
+    <value>Usuario: </value>
   </data>
   <data name="lbUserName" xml:space="preserve">
-    <value>UserName:</value>
+    <value>Nombre de Usuario:</value>
   </data>
   <data name="lbWelcome" xml:space="preserve">
-    <value>Welcome: </value>
+    <value>Bienvenido: </value>
   </data>
   <data name="titleBoard" xml:space="preserve">
-    <value>Board</value>
+    <value>Tablero</value>
   </data>
   <data name="titleCosultHistory" xml:space="preserve">
-    <value>Consult History</value>
+    <value>Consultar Historial</value>
   </data>
   <data name="titleLogin" xml:space="preserve">
-    <value>Login</value>
+    <value>Inicio de sesión</value>
   </data>
   <data name="titleRecordPlayer" xml:space="preserve">
-    <value>Record Player</value>
+    <value>Registrar Jugador</value>
   </data>
   <data name="titleStartGame" xml:space="preserve">
-    <value>Start Game</value>
+    <value>Iniciar Partida</value>
   </data>
 </root>

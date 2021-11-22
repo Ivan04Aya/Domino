@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCliente", "WpfDomino\WpfCliente.csproj", "{EF869843-90E1-4D57-A529-DFE16B522B1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDomino", "WpfDomino\WpfDomino.csproj", "{EF869843-90E1-4D57-A529-DFE16B522B1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfDomino", "WcfDomino\WcfDomino.csproj", "{32F8615A-167C-477F-A7F8-74802F7E75A4}"
 EndProject

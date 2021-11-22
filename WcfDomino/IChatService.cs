@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WcfDomino
 {
@@ -21,7 +17,7 @@ namespace WcfDomino
         [OperationContract]
         void sendMessage(Message message);
         [OperationContract]
-        void sendMessagePrivate(Message message,string user);
+        void sendMessagePrivate(Message message, string user);
         [OperationContract]
         List<string> displayPlayers();
     }

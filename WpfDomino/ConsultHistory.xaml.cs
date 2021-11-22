@@ -10,29 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfDomino
 {
     /// <summary>
-    /// Lógica de interacción para StartGame.xaml
+    /// Lógica de interacción para ConsultHistory.xaml
     /// </summary>
-    public partial class StartGame : Window
+    public partial class ConsultHistory : Window
     {
-        public StartGame()
+        public ConsultHistory()
         {
             InitializeComponent();
         }
-
-        public StartGame(string user)
+        public ConsultHistory(string user)
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

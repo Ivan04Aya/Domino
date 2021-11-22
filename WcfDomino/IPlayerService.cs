@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WcfDomino
 {
     [ServiceContract(SessionMode = SessionMode.Allowed)]
-    interface IPlayerService
+    public interface IPlayerService
     {
         [OperationContract]
-        Boolean recordPlayer(Player player);
+        Boolean RecordPlayer(string name, string userName, string email, string password);
 
         [OperationContract]
-        Boolean sendMail(string email);
-
-        [OperationContract]
-        History consultHistory(string name);
+        int SendMail(string email);
     }
 }

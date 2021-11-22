@@ -5,18 +5,17 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfDomino;
 
-namespace WpfCliente
+namespace WpfDomino
 {
     /// <summary>
     /// Lógica de interacción para App.xaml
     /// </summary>
     public partial class App : Application
     {
-        static void main()
+        App()
         {
-            Login login = new Login();
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es");
         }
     }
 }

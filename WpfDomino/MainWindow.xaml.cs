@@ -66,7 +66,7 @@ namespace WpfDomino
 
         private void insertMessage(Message message)
         {
-            tbMessages.AppendText("\n" + message.user.UserName + ": says (" + message.Date + "):\n" + message.MessageChat + "\n");
+            tbMessages.AppendText("\n" + message.User.userName + ": says (" + message.Date + "):\n" + message.MessageChat + "\n");
         }
 
         private void messages()
@@ -84,7 +84,7 @@ namespace WpfDomino
             {
                 Date = DateTime.Now,
                 MessageChat = tbMessage.Text,
-                user = player
+                User = player
             };
 
             if (lbPlayers.SelectedItem != null)
@@ -125,7 +125,7 @@ namespace WpfDomino
                 {
                     Date = DateTime.Now,
                     MessageChat = "i'm logged out",
-                    user = player
+                    User = player
                 });
                 remoteProxy.removeUser(player);
                 this.Close();

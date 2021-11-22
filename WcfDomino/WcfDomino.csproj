@@ -46,6 +46,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,22 +57,85 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatService.cs" />
-    <Compile Include="DataBaseConnection.cs" />
-    <Compile Include="Game.cs" />
+    <Compile Include="Game.cs">
+      <DependentUpon>Kurumino.tt</DependentUpon>
+    </Compile>
     <Compile Include="GameService.cs" />
-    <Compile Include="History.cs" />
+    <Compile Include="History.cs">
+      <DependentUpon>Kurumino.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryService.cs" />
     <Compile Include="IChatService.cs" />
     <Compile Include="IGameService.cs" />
+    <Compile Include="IHistoryService.cs" />
     <Compile Include="IPlayerService.cs" />
+    <Compile Include="Kurumino.cs">
+      <DependentUpon>Kurumino.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Kurumino.Designer.cs">
+      <DependentUpon>Kurumino.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="KuruminoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KuruminoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KuruminoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KuruminoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KuruminoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KuruminoModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Player.cs">
+      <DependentUpon>Kurumino.tt</DependentUpon>
+    </Compile>
     <Compile Include="PlayerService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="Kurumino.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Kurumino.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="KuruminoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KuruminoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KuruminoModel.edmx.diagram">
+      <DependentUpon>KuruminoModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Kurumino.tt">
+      <DependentUpon>Kurumino.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Kurumino.cs</LastGenOutput>
+    </Content>
+    <Content Include="KuruminoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KuruminoModel.edmx</DependentUpon>
+      <LastGenOutput>KuruminoModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KuruminoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KuruminoModel.edmx</DependentUpon>
+      <LastGenOutput>KuruminoModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

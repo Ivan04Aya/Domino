@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WcfDomino
 {
@@ -20,13 +18,13 @@ namespace WcfDomino
 
         public Player playerConnect(string user)
         {
-            Player player = new Player () { UserName = user };
-            var exist = from Player e in this.conectedUsers where e.UserName == player.UserName select e;
+            Player player = new Player() { userName = user };
+            var exist = from Player e in this.conectedUsers where e.userName == player.userName select e;
             if (exist.Count() == 0)
             {
                 this.conectedUsers.Add(player);
-                incomingMessages.Add(player.UserName, new List<Message>(){
-                    new Message() {user = player,MessageChat= "Welcome to Kurumino chat ",Date=DateTime.Now}
+                incomingMessages.Add(player.userName, new List<Message>(){
+                    new Message() {User = player,MessageChat= "Welcome to Kurumino chat ",Date=DateTime.Now}
                 });
                 players.Add(user);
             }
@@ -40,36 +38,36 @@ namespace WcfDomino
 
         public List<Message> receiveMessage(Player player)
         {
-            List<Message> messages = incomingMessages[player.UserName];
-            incomingMessages[player.UserName] = new List<Message>();
+            List<Message> messages = incomingMessages[player.userName];
+            incomingMessages[player.userName] = new List<Message>();
             if (messages.Count <= 0)
             {
-                messages=null;
+                messages = null;
             }
             return messages;
         }
 
         public void removeUser(Player player)
         {
-            players.Remove(player.UserName);
+            players.Remove(player.userName);
         }
 
 
         public void sendMessage(Message message)
         {
-            Console.WriteLine(message.user.UserName + "   says : " + message.MessageChat + " at " + message.Date);
+            Console.WriteLine(message.User.userName + "   says : " + message.MessageChat + " at " + message.Date);
             foreach (var user in this.conectedUsers)
             {
-                if (!message.user.UserName.Equals(user.UserName))
+                if (!message.User.userName.Equals(user.userName))
                 {
-                    incomingMessages[user.UserName].Add(message);
+                    incomingMessages[user.userName].Add(message);
                 }
             }
         }
 
         public void sendMessagePrivate(Message message, string user)
         {
-            if (!message.user.UserName.Equals(user))
+            if (!message.User.userName.Equals(user))
             {
                 incomingMessages[user].Add(message);
             }

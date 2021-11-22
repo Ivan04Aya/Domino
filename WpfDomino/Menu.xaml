@@ -4,14 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDomino"
+        xmlns:p ="clr-namespace:WpfDomino.Properties"
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="800">
     <Grid>
         <Label x:Name="lbTitleGame" Content="Kurumino" HorizontalAlignment="Left" Margin="69,39,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="35"/>
-        <Button x:Name="btStartGame" Content="Start Game" HorizontalAlignment="Left" Margin="541,120,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btDisplayHistory" Content="Display History" HorizontalAlignment="Left" Margin="541,191,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btLeaveGame" Content="Leave Game" HorizontalAlignment="Left" Margin="541,337,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btSignOff" Content="Sing Off" HorizontalAlignment="Left" Margin="541,262,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btStartGame" Content="{x:Static p:Resources.btStarGame}" HorizontalAlignment="Left" Margin="541,120,0,0" VerticalAlignment="Top" Width="100" Click="btStartGame_Click"/>
+        <Button x:Name="btDisplayHistory" Content="{x:Static p:Resources.btDisplayHistory}" HorizontalAlignment="Left" Margin="541,191,0,0" VerticalAlignment="Top" Width="100" Click="btDisplayHistory_Click"/>
+        <Button x:Name="btLeaveGame" Content="{x:Static p:Resources.btLeaveGame}" HorizontalAlignment="Left" Margin="541,337,0,0" VerticalAlignment="Top" Width="100" Click="btLeaveGame_Click"/>
+        <Button x:Name="btSignOff" Content="{x:Static p:Resources.btSingOff}" HorizontalAlignment="Left" Margin="541,262,0,0" VerticalAlignment="Top" Width="100" Click="btSignOff_Click"/>
+        <Label x:Name="lbWelcome" Content="{x:Static p:Resources.lbWelcome}" HorizontalAlignment="Left" Margin="476,58,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbUser" Content="" HorizontalAlignment="Left" Margin="547,58,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
