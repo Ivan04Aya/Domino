@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="KuruminoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="KuruminoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="idGame" />
@@ -41,32 +41,28 @@
           <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KuruminoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="KuruminoEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Games" EntityType="KuruminoModel.Game" />
-          <EntitySet Name="Histories" EntityType="KuruminoModel.History" />
-          <EntitySet Name="Players" EntityType="KuruminoModel.Player" />
-        </EntityContainer>
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="idGame" />
           </Key>
           <Property Name="idGame" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="playerOne" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="playerTwo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="dateGame" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="result" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="playerOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="playerTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dateGame" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="History">
           <Key>
             <PropertyRef Name="idHistory" />
           </Key>
           <Property Name="idHistory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="userName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="userName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="gameWin" Type="Int32" Nullable="false" />
           <Property Name="gameLose" Type="Int32" Nullable="false" />
           <Property Name="totalGame" Type="Int32" Nullable="false" />
@@ -76,48 +72,53 @@
             <PropertyRef Name="idPlayer" />
           </Key>
           <Property Name="idPlayer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="userName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="userName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        </Schema>
+        <EntityContainer Name="KuruminoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Game" EntityType="Self.Game" />
+          <EntitySet Name="History" EntityType="Self.History" />
+          <EntitySet Name="Player" EntityType="Self.Player" />
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="KuruminoModelStoreContainer" CdmEntityContainer="KuruminoEntities">
-          <EntitySetMapping Name="Games">
+          <EntitySetMapping Name="Game">
             <EntityTypeMapping TypeName="KuruminoModel.Game">
               <MappingFragment StoreEntitySet="Game">
-                <ScalarProperty Name="result" ColumnName="result" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="dateGame" ColumnName="dateGame" />
-                <ScalarProperty Name="playerTwo" ColumnName="playerTwo" />
-                <ScalarProperty Name="playerOne" ColumnName="playerOne" />
                 <ScalarProperty Name="idGame" ColumnName="idGame" />
+                <ScalarProperty Name="playerOne" ColumnName="playerOne" />
+                <ScalarProperty Name="playerTwo" ColumnName="playerTwo" />
+                <ScalarProperty Name="dateGame" ColumnName="dateGame" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="result" ColumnName="result" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Histories">
+          <EntitySetMapping Name="History">
             <EntityTypeMapping TypeName="KuruminoModel.History">
               <MappingFragment StoreEntitySet="History">
-                <ScalarProperty Name="totalGame" ColumnName="totalGame" />
-                <ScalarProperty Name="gameLose" ColumnName="gameLose" />
-                <ScalarProperty Name="gameWin" ColumnName="gameWin" />
-                <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="idHistory" ColumnName="idHistory" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="gameWin" ColumnName="gameWin" />
+                <ScalarProperty Name="gameLose" ColumnName="gameLose" />
+                <ScalarProperty Name="totalGame" ColumnName="totalGame" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Players">
+          <EntitySetMapping Name="Player">
             <EntityTypeMapping TypeName="KuruminoModel.Player">
               <MappingFragment StoreEntitySet="Player">
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="idPlayer" ColumnName="idPlayer" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -135,7 +136,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

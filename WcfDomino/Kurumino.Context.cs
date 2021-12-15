@@ -25,8 +25,8 @@ namespace WcfDomino
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Game> Games { get; set; }
-        public virtual DbSet<History> Histories { get; set; }
-        public virtual DbSet<Player> Players { get; set; }
+        public virtual DbSet<Game> Game { get; set; }
+        public virtual DbSet<History> History { get; set; }
+        public virtual DbSet<Player> Player { get; set; }
     }
 }

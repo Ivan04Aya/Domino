@@ -14,11 +14,17 @@ namespace WcfDomino
 
         [OperationContract]
         List<Message> receiveMessage(Player player);
+
         [OperationContract]
         void sendMessage(Message message);
+
         [OperationContract]
         void sendMessagePrivate(Message message, string user);
+
         [OperationContract]
         List<string> displayPlayers();
+
+        [OperationContract]
+        bool RecordPlayer(string name, string userName, string email, string password);
     }
 }

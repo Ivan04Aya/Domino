@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.ServiceModel;
+using System.Text;
 
 namespace WcfDomino
 {
@@ -72,5 +74,46 @@ namespace WcfDomino
                 incomingMessages[user].Add(message);
             }
         }
+
+        public Boolean RecordPlayer(string name, string userName, string email, string password)
+        {
+            Boolean result = false;
+            try
+            {
+                using (var context = new KuruminoEntities())
+                {
+                    Player player = new Player
+                    {
+                        name = name,
+                        userName = userName,
+                        email = email,
+                        password = Compute5HA256Hash(password)
+                    };
+                    context.Player.Add(player);
+                    context.SaveChanges();
+                    result = true;
+                }
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+            return result;
+        }
+
+        public string Compute5HA256Hash(string input)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
     }
 }

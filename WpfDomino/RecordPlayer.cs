@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,6 +21,8 @@ namespace WpfDomino
     /// </summary>
     public partial class RecordPlayer : Window
     {
+        private ChannelFactory<IChatService> remoteFactory;
+        private IChatService remoteProxy;
         public RecordPlayer()
         {
             InitializeComponent();
@@ -35,8 +38,9 @@ namespace WpfDomino
 
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
-            PlayerService playerService = new PlayerService();
-            if (playerService.RecordPlayer(tbName.Text, tbUserName.Text, tbEmail.Text, pbPassword.Password.ToString()))
+            remoteFactory = new ChannelFactory<IChatService>("ChatConfig");
+            remoteProxy = remoteFactory.CreateChannel();
+            if (remoteProxy.RecordPlayer(tbName.Text, tbUserName.Text, tbEmail.Text, pbPassword.Password))
             {
                 MessageBox.Show("Player save");
             }

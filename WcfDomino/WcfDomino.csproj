@@ -69,30 +69,20 @@
     <Compile Include="IGameService.cs" />
     <Compile Include="IHistoryService.cs" />
     <Compile Include="IPlayerService.cs" />
-    <Compile Include="Kurumino.cs">
-      <DependentUpon>Kurumino.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
+    <Compile Include="Kurumino.Context.cs">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kurumino.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumino.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kurumino.tt</DependentUpon>
     </Compile>
     <Compile Include="Kurumino.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Kurumino.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="KuruminoModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KuruminoModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KuruminoModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KuruminoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KuruminoModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KuruminoModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Message.cs" />
     <Compile Include="Player.cs">
@@ -108,12 +98,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Kurumino.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="KuruminoModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KuruminoModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="KuruminoModel.edmx.diagram">
-      <DependentUpon>KuruminoModel.edmx</DependentUpon>
+    <None Include="Kurumino.edmx.diagram">
+      <DependentUpon>Kurumino.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -121,20 +107,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Kurumino.tt">
+    <Content Include="Kurumino.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Kurumino.edmx</DependentUpon>
+      <LastGenOutput>Kurumino.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Kurumino.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Kurumino.edmx</DependentUpon>
       <LastGenOutput>Kurumino.cs</LastGenOutput>
-    </Content>
-    <Content Include="KuruminoModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KuruminoModel.edmx</DependentUpon>
-      <LastGenOutput>KuruminoModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="KuruminoModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KuruminoModel.edmx</DependentUpon>
-      <LastGenOutput>KuruminoModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

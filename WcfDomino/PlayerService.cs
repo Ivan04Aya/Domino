@@ -23,7 +23,7 @@ namespace WcfDomino
                         email = email,
                         password = Compute5HA256Hash(password)
                     };
-                    context.Players.Add(player);
+                    context.Player.Add(player);
                     context.SaveChanges();
                     result = true;
                 }
@@ -80,7 +80,7 @@ namespace WcfDomino
             {
                 using (var context = new KuruminoEntities())
                 {
-                    var Players = (from player in context.Players
+                    var Players = (from player in context.Player
                                    where player.userName == userName && player.password == passwordHashed
                                    select player).Count();
                     if (Players > 0)

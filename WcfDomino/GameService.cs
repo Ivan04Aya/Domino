@@ -27,7 +27,7 @@ namespace WcfDomino
                     {
                         result = resultGame
                     };
-                    context.Games.Add(game);
+                    context.Game.Add(game);
                     context.SaveChanges();
                     result = resultGame;
                 }

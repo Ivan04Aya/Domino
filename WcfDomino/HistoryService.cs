@@ -14,7 +14,7 @@ namespace WcfDomino
             {
                 using (var context = new KuruminoEntities())
                 {
-                    var histories = context.Histories.Find(userName);
+                    var histories = context.History.Find(userName);
                     if (histories != null)
                     {
                         history = histories;

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0e40c763bcb141379b0ebaf213ab1d6b" Name="Diagram1">
-        <EntityTypeShape EntityType="KuruminoModel.Game" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="KuruminoModel.History" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="KuruminoModel.Player" Width="1.5" PointX="0.75" PointY="3.75" />
+      <Diagram DiagramId="73ba6ca490bd4b69b95513b8f832c01d" Name="Diagram1">
+        <EntityTypeShape EntityType="KuruminoModel.Game" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KuruminoModel.History" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KuruminoModel.Player" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
